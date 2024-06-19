@@ -205,6 +205,6 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "workbench.editor.enablePreview": false,
-  "editor.fontSize": 15,
+  "editor.fontSize": 14,
   "editor.fontLigatures": true
 }
