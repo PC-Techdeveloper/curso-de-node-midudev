@@ -205,6 +205,7 @@
   "editor.formatOnPaste": true,
   "editor.formatOnSave": true,
   "workbench.editor.enablePreview": false,
-  "editor.fontSize": 14,
-  "editor.fontLigatures": true
+  "editor.fontSize": 13.8,
+  "editor.fontLigatures": true,
+  "zenMode.fullScreen": true
 }
