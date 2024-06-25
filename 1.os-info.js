@@ -5,6 +5,7 @@ os -> Muestra información del sistema operativo de tu equipo.
 */
 
 //Aplicación para mostrar información del sistema operativo
+
 const os = require('node:os')
 
 console.log('Información del sistema operativo: ')
