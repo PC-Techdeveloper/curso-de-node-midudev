@@ -1,18 +1,18 @@
 {
   // ========== Visuals ==========
   "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.settings.editor": "json",
   "editor.guides.bracketPairs": "active",
   "editor.lineNumbers": "on",
-  "editor.renderWhitespace": "boundary",
+  "editor.renderWhitespace": "none",
   "window.autoDetectColorScheme": true,
   "workbench.colorTheme": "One Dark Pro Darker",
   "workbench.editor.tabActionLocation": "left",
-  "workbench.fontAliasing": "antialiased",
-  "workbench.iconTheme": "symbols",
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
   "workbench.preferredLightColorTheme": "One Dark Pro Darker",
   "workbench.productIconTheme": "fluent-icons",
-  "workbench.startupEditor": "newUntitledFile",
+  "workbench.startupEditor": "none",
   "workbench.tree.expandMode": "singleClick",
   "workbench.tree.indent": 10,
 
@@ -44,6 +44,8 @@
   "git.untrackedChanges": "separate",
   "scm.diffDecorationsGutterWidth": 2,
   "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.tabs.showActiveTerminal": "singleTerminal",
+  "terminal.integrated.tabs.enableAnimation": true,
   "terminal.integrated.persistentSessionReviveProcess": "never",
   "terminal.integrated.tabs.enabled": true,
   "workbench.editor.closeOnFileDelete": true,
@@ -77,11 +79,8 @@
   },
 
   // ==========  Global Level Config, needs to put in User Settings ==========
-  "window.dialogStyle": "custom",
-  "window.nativeTabs": true, // this is great, macOS only
+
   "window.title": "${rootName}", // this make tabs more readable
-  "window.titleBarStyle": "custom",
-  "extensions.autoUpdate": "onlyEnabledExtensions",
 
   // ========== Extension configs ==========
   "emmet.showSuggestionsAsSnippets": true,
@@ -107,18 +106,20 @@
     { "rule": "*quotes", "severity": "off" },
     { "rule": "*semi", "severity": "off" }
   ],
-  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact", "vue", "html", "markdown", "json", "jsonc", "yaml", "toml"],
-
-  "github.copilot.enable": {
-    "*": true,
-    "markdown": true,
-    "plaintext": false
-  },
-  "cSpell.allowCompoundWords": true,
-  "cSpell.language": "en,en-US",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
+  ],
   "css.lint.hexColorLength": "ignore",
-  "githubIssues.workingIssueFormatScm": "#${issueNumberLabel}",
-  "githubPullRequests.fileListLayout": "tree",
   "gitlens.codeLens.authors.enabled": false,
   "gitlens.codeLens.enabled": false,
   "gitlens.codeLens.recentChange.enabled": false,
@@ -165,23 +166,24 @@
       "stash": true
     }
   },
-  "i18n-ally.autoDetection": false,
-  "i18n-ally.displayLanguage": "en",
-  "i18n-ally.ignoredLocales": [],
-  "iconify.annotations": true,
-  "iconify.inplace": true,
-  "svg.preview.mode": "svg",
 
   // I only use Prettier for manually formatting
-  "prettier.enable": true,
-  "prettier.printWidth": 200,
-  "prettier.semi": false,
+  "prettier.requireConfig": false,
+  "prettier.printWidth": 80,
+  "prettier.tabWidth": 2,
+  "prettier.useTabs": false,
+  "prettier.semi": true,
   "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.bracketSpacing": true,
   "prettier.arrowParens": "avoid",
+  "prettier.proseWrap": "preserve",
+  "prettier.endOfLine": "lf",
   "editor.wordWrap": "on",
   "breadcrumbs.enabled": false,
   "editor.smoothScrolling": true,
   "terminal.integrated.smoothScrolling": true,
+  "files.autoSave": "afterDelay",
   "symbols.hidesExplorerArrows": false,
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -191,6 +193,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "editor.minimap.enabled": false,
   "[javascriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -199,57 +202,92 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": true,
-  "workbench.editor.enablePreview": false,
+  "editor.formatOnSave": true,
+  "workbench.editor.enablePreview": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "editor.fontLigatures": true,
-  "zenMode.fullScreen": true,
+  "zenMode.fullScreen": false,
   "explorer.confirmPasteNative": false,
-  "supermaven.enable": {
-    "*": true
-  },
-  "terminal.integrated.fontSize": 15,
-  "editor.fontSize": 15,
-  "editor.lineHeight": 20,
-  "editor.fontFamily": "Cascadia Code",
-  "terminal.integrated.fontFamily": "Cascadia Code",
-  "editor.cursorStyle": "line",
-  "editor.formatOnSave": false,
-  "window.zoomLevel": 1,
-  "editor.minimap.maxColumn": 40,
+  "editor.fontFamily": "CaskaydiaCove Nerd Font",
   "workbench.preferredDarkColorTheme": "One Dark Pro Darker",
-  "editor.scrollbar.vertical": "hidden",
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.cursorBlinking": "expand",
-  "workbench.sideBar.location": "right",
-  "editor.glyphMargin": false,
-  "oneDarkPro.vivid": true,
-  "oneDarkPro.bold": true,
-  "git.openRepositoryInParentFolders": "always",
-  "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "CaskaydiaCove Nerd Font",
+  "editor.fontSize": 14,
+  "window.zoomLevel": 2,
+  "editor.folding": false,
+  "terminal.integrated.lineHeight": 1,
+  "editor.cursorStyle": "line",
+  "workbench.sideBar.location": "left",
+  "console-ninja.toolsToEnableSupportAutomaticallyFor": {
+    "live-server-extension": true,
+    "live-preview-extension": true
   },
-  "terminal.integrated.profiles.windows": {
-    "PowerShell": {
-      "source": "PowerShell",
-      "icon": "terminal-powershell"
-    },
-    "Command Prompt": {
-      "path": ["${env:windir}\\Sysnative\\cmd.exe", "${env:windir}\\System32\\cmd.exe"],
-      "args": [],
-      "icon": "terminal-cmd"
-    },
-    "Git Bash": {
-      "source": "Git Bash"
-    },
-    "Windows PowerShell": {
-      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+  "editor.parameterHints.enabled": false,
+  "editor.renderLineHighlight": "all",
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.suggest.localityBonus": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "workbench.editor.wrapTabs": false,
+  "editor.guides.indentation": true,
+  //Desactiva animaciones
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "editor.cursorBlinking": "expand",
+  //Desactiva las sugerencias emergentes
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": true,
+    "strings": true
+  },
+  //Reduce la complejidad del intellisense
+  "typescript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.completeJSDocs": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
+  "window.newWindowDimensions": "maximized",
+  "window.restoreFullscreen": true,
+  "supermaven.enable": {
+    "enable": true,
+    "autoUpdate": true,
+    "autoSave": true,
+    "autoFormat": true,
+    "formatOnSave": true,
+    "formatOnPaste": true
+  },
+  "terminal.integrated.env.windows": {},
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.activityBar.location": "top",
+  "explorer.compactFolders": false,
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "material-icon-theme.hidesExplorerArrows": true,
+  //APC
+  "apc.activityBar": {
+    "position": "bottom",
+    "hideSettings": true,
+    "size": 24
+  },
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 12,
+      "y": 10
     }
   },
-  "files.autoSave": "afterDelay",
-  "editor.minimap.enabled": false,
-  "terminal.integrated.env.windows": {},
-  "console-ninja.featureSet": "Community",
-  "editor.parameterHints.enabled": false,
-  "liveServer.settings.fullReload": true,
-  "css.lint.unknownAtRules": "ignore"
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 21,
+    "fontSize": 12
+  },
+  "explorer.fileNesting.enabled": true,
+  "zenMode.centerLayout": false,
+  "zenMode.showTabs": "multiple",
+  "zenMode.hideActivityBar": false,
+  "zenMode.restore": true,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.hideStatusBar": false
 }
